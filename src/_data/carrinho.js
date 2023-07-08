@@ -36,12 +36,16 @@ const carrinho = ref({
 const mostraCarrinho = ref(true)
 const mostraFormulario = ref(true)
 const mostraLivros = ref(true)
+const mostra = ref(false)
 
 
   function formularioAparece() {
    mostraCarrinho.value = (false)
    mostraFormulario.value = (true)
-   mostraLivros.value = (false)}
+   mostraLivros.value = (false)
+   mostra.value = (true) 
+  }
+   
   
 
-  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, mostraCarrinho, formularioAparece, mostraFormulario, mostraLivros  }
+  export { carrinho, adicionarAoCarrinho, removerItemCarrinho, atualizaQuantidadeItem, mostraCarrinho, formularioAparece, mostraFormulario, mostraLivros, mostra  }

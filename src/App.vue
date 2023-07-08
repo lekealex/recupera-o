@@ -2,6 +2,7 @@
 import MeuCarrinho from '@/components/MeuCarrinho.vue'
 import ListagemLivros from '@/components/ListagemLivros.vue'
 import FormularioVenda from './components/FormularioVenda.vue';
+import { mostra } from '@/_data/carrinho.js'
 </script>
 
 <template>
@@ -9,7 +10,9 @@ import FormularioVenda from './components/FormularioVenda.vue';
   <div class="container-geral">
     <listagem-livros />
     <meu-carrinho />
-    <formulario-venda />
+    <div v-if="mostra">
+      <formulario-venda />
+    </div>
   </div>
 </template>
 
